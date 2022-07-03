@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option go_package = "github.com/leaderseek/api-go/service";
+
+option java_multiple_files = true;
+option java_package = "com.github.leaderseek.api-dart.service";
+option java_outer_classname = "ServiceProto";
+
+import "service/param/team_create.proto";
+import "service/param/team_add_members.proto";
+import "google/protobuf/empty.proto";
+
+package api.v0.service;
+
+service Leaderseek {
+    rpc TeamCreate (
+        api.v0.service.param.TeamCreateRequest
+    ) returns (
+        api.v0.service.param.TeamCreateResponse
+    ) {}
+
+    rpc TeamAddMembers (
+        api.v0.service.param.TeamAddMembersRequest
+    ) returns (
+        google.protobuf.Empty
+    ) {}
+}

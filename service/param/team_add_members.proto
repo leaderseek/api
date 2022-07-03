@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "github.com/leaderseek/api-go/service/param";
+
+option java_multiple_files = true;
+option java_package = "com.github.leaderseek.api-dart.service.param";
+option java_outer_classname = "ParamProto";
+
+import "message/player.proto";
+
+package api.v0.service.param;
+
+message TeamAddMembersRequest {
+    string team_i_d = 1;
+    repeated api.v0.message.Player players = 2;
+}

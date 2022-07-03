@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "github.com/leaderseek/api-go/message";
+
+option java_multiple_files = true;
+option java_package = "com.github.leaderseek.api-dart.message";
+option java_outer_classname = "MessageProto";
+
+package api.v0.message;
+
+message Team {
+    string i_d = 1;
+    string display_name = 2;
+}
